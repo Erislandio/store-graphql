@@ -9,11 +9,15 @@ import { queries as logisticsQueries } from './logistics'
 import { mutations as profileMutations, queries as profileQueries, rootResolvers as profileRootResolvers } from './profile'
 import { mutations as sessionMutations, queries as sessionQueries } from './session'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { fieldResolvers as subscriptionsFieldResolvers, mutations as subscriptionsMutations, queries as subscriptionsQueries } from './subscriptions'
 import { queries as wishListQueries } from './wishList'
 =======
 import { queries as wishListQueries, mutation as wishListMutations } from './wishList'
 >>>>>>> Add createwishList resolve
+=======
+import { queries as listQueries, mutation as listMutations } from './list'
+>>>>>>> Change name from wishList to list
 
 // tslint:disable-next-line:no-var-requires
 Promise = require('bluebird')
@@ -31,10 +35,14 @@ export const resolvers = {
     ...documentMutations,
     ...sessionMutations,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ...subscriptionsMutations
 =======
     ...wishListMutations
 >>>>>>> Add createwishList resolve
+=======
+    ...listMutations
+>>>>>>> Change name from wishList to list
   },
   Query: {
     ...catalogQueries,
@@ -45,7 +53,11 @@ export const resolvers = {
     ...authQueries,
     ...logisticsQueries,
     ...sessionQueries,
+<<<<<<< HEAD
     ...subscriptionsQueries,
     ...wishListQueries,
+=======
+    ...listQueries
+>>>>>>> Change name from wishList to list
   },
 }
