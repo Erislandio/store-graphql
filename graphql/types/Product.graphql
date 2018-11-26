@@ -98,7 +98,6 @@ type SKU {
   sellers: [Seller]
   variations: [Property]
   attachments: [Attachment]
-  calculatedAttachments: String
 }
 
 type KitItem {
@@ -116,9 +115,26 @@ type Attachment {
 }
 
 type DomainValues {
-  FieldName: String
-  MaxCaracters: String
-  DomainValues: String
+  name: String
+  items: [AttachmentItem]
+  properties: AttachmentProperties
+}
+
+type AttachmentItem {
+  defaultQuantity: Int
+  minQuantity: Int
+  maxQuantity: Int
+  name: String
+  price: Int
+  priceTable: String
+  image: String
+  id: String
+  description: String
+}
+
+type AttachmentProperties {
+  maxTotalItems: Int
+  minTotalItems: Int
 }
 
 enum InstallmentsCriteria {
